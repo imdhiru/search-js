@@ -1,0 +1,14 @@
+ jQuery("#startsearch").click(function (event) {
+        event.preventDefault();
+        window.location = "http://www.xtb.com.tr/Search?search=" + jQuery(this).prev('.search-for').val();
+    });
+
+    jQuery(".search-for").keydown(function (event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            window.location = "http://www.xtb.com.tr/Search?search=" + jQuery(this).val();
+        }
+    });
+    
+    here #startsearch is  "id" of submit button.
+    .search-for  is class to input text.
